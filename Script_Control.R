@@ -840,7 +840,7 @@ write.table(miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper, "miMERGE_myipubCom
 
 system("sort -k1,1 -k2,2n miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr.txt > miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr.sort.txt")
 
-system("bedtools merge -i miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr.sort.txt -d 2 | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr_clustered.txt")
+system("bedtools merge -i miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr.sort.txt  | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr_clustered.txt")
 system("bedtools closest -a miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr_clustered.txt -b /home/ankitv/ref_av/hg38/gencode.v29.annotation.gene.sort.gtf  -d > miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr_clusteredgene.txt")
 
 miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr_clusteredgene <- read.table("miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr_clusteredgene.txt", header = F, stringsAsFactors = F)
@@ -892,7 +892,7 @@ write.table(miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hypo, "miMERGE_myipubComb
 write.table(miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hypo, "miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hypo_chr.txt", sep = "\t", quote = F, append = F, row.names = F, col.names = F)
 
 system("sort -k1,1 -k2,2n miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hypo_chr.txt > miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hypo_chr.sort.txt")
-system("bedtools merge -i miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hypo_chr.sort.txt -d 2 | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hypo_chr_clustered.txt")
+system("bedtools merge -i miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hypo_chr.sort.txt  | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hypo_chr_clustered.txt")
 system("bedtools closest -a miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hypo_chr_clustered.txt -b /home/ankitv/ref_av/hg38/gencode.v29.annotation.gene.sort.gtf  -d > miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hypo_chr_clusteredgene.txt")
 
 miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hypo_chr_clusteredgene <- read.table("miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hypo_chr_clusteredgene.txt", header = F, stringsAsFactors = F)
@@ -949,7 +949,7 @@ write.table(miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hyper, "miMERGE_myipubCom
 
 system("sort -k1,1 -k2,2n miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hyper_chr.txt > miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hyper_chr.sort.txt")
 
-system("bedtools merge -i miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hyper_chr.sort.txt -d 2 | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hyper_chr_clustered.txt")
+system("bedtools merge -i miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hyper_chr.sort.txt | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hyper_chr_clustered.txt")
 system("bedtools closest -a miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hyper_chr_clustered.txt -b /home/ankitv/ref_av/hg38/gencode.v29.annotation.gene.sort.gtf  -d > miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hyper_chr_clusteredgene.txt")
 
 miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hyper_chr_clusteredgene <- read.table("miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hyper_chr_clusteredgene.txt", header = F, stringsAsFactors = F)
@@ -1001,7 +1001,7 @@ write.table(miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hypo, "miMERGE_myipubComb
 write.table(miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hypo, "miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hypo_chr.txt", sep = "\t", quote = F, append = F, row.names = F, col.names = F)
 
 system("sort -k1,1 -k2,2n miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hypo_chr.txt > miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hypo_chr.sort.txt")
-system("bedtools merge -i miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hypo_chr.sort.txt -d 2 | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hypo_chr_clustered.txt")
+system("bedtools merge -i miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hypo_chr.sort.txt | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hypo_chr_clustered.txt")
 system("bedtools closest -a miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hypo_chr_clustered.txt -b /home/ankitv/ref_av/hg38/gencode.v29.annotation.gene.sort.gtf  -d > miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hypo_chr_clusteredgene.txt")
 
 miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hypo_chr_clusteredgene <- read.table("miMERGE_myipubCombat3re_chrpos500bp_avg_PR_Hypo_chr_clusteredgene.txt", header = F, stringsAsFactors = F)
@@ -1269,7 +1269,23 @@ ipubcomdataBin500bp_Hypo_PR_1_filtmin2_featured_genedis <- ipubcomdataBin500bp_H
 ipubcomdataBin500bp_Hypo_PR_1_filtmin2_featured_genedis["Meth_level"] <- "Hypo"
 write.table(ipubcomdataBin500bp_Hypo_PR_1_filtmin2_featured_genedis, "ipubcomdataBin500bp_Hypo_PR_1_filtmin2_featured_genedis.txt" , quote = FALSE, append = FALSE, sep = "\t", row.names = F, col.names = T)
 
+#recheck after removing -d option, the numbers remain same
+#bedtools merge -i ipubcomdataBin500bp_Hypo_PG_1_filtmin2chr.sort.txt  | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > recheck_ipubcomdataBin500bp_Hypo_PG_1_filtmin2chr_clustered.txt
+#bedtools merge -i ipubcomdataBin500bp_Hyper_PG_1_filtmin2chr.sort.txt  | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > recheck_ipubcomdataBin500bp_Hyper_PG_1_filtmin2chr_clustered.txt
+#bedtools merge -i ipubcomdataBin500bp_Hypo_PR_1_filtmin2chr.sort.txt  | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > recheck_ipubcomdataBin500bp_Hypo_PR_1_filtmin2chr_clustered.txt
+#bedtools merge -i ipubcomdataBin500bp_Hyper_PR_1_filtmin2chr.sort.txt  | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > recheck_ipubcomdataBin500bp_Hyper_PR_1_filtmin2chr_clustered.txt
 
+#grep "row_1" ipubcomdataBin500bp_Hypo_PG_1_filtmin2chr_clusteredgenedischr.txt -v > recheck_ipubcomdataBin500bp_Hypo_PG_1_filtmin2chr_clusteredgenedischr.txt
+#grep "row_1" ipubcomdataBin500bp_Hyper_PG_1_filtmin2chr_clusteredgenedischr.txt  -v > recheck_ipubcomdataBin500bp_Hyper_PG_1_filtmin2chr_clusteredgenedischr.txt
+#grep "row_1" ipubcomdataBin500bp_Hypo_PR_1_filtmin2chr_clusteredgenedischr.txt -v > recheck_ipubcomdataBin500bp_Hypo_PR_1_filtmin2chr_clusteredgenedischr.txt
+#grep "row_1" ipubcomdataBin500bp_Hyper_PR_1_filtmin2chr_clusteredgenedischr.txt -v > recheck_ipubcomdataBin500bp_Hyper_PR_1_filtmin2chr_clusteredgenedischr.txt
+
+
+
+#bedtools intersect -a recheck_ipubcomdataBin500bp_Hypo_PG_1_filtmin2chr_clustered.txt -b recheck_ipubcomdataBin500bp_Hypo_PG_1_filtmin2chr_clusteredgenedischr.txt | wc -l
+#bedtools intersect -a recheck_ipubcomdataBin500bp_Hyper_PG_1_filtmin2chr_clustered.txt -b recheck_ipubcomdataBin500bp_Hyper_PG_1_filtmin2chr_clusteredgenedischr.txt | wc -l
+#bedtools intersect -a recheck_ipubcomdataBin500bp_Hypo_PR_1_filtmin2chr_clustered.txt -b recheck_ipubcomdataBin500bp_Hypo_PR_1_filtmin2chr_clusteredgenedischr.txt | wc -l
+#bedtools intersect -a recheck_ipubcomdataBin500bp_Hyper_PR_1_filtmin2chr_clustered.txt -b recheck_ipubcomdataBin500bp_Hyper_PR_1_filtmin2chr_clusteredgenedischr.txt | wc -l
 dim(ipubcomdataBin500bp_Hypo_PG_1_filtmin2chr)#921
 dim(ipubcomdataBin500bp_Hypo_PR_1_filtmin2chr)#1264
 
@@ -1327,7 +1343,7 @@ nonshared_Re_ipubcomdataBin500bp_Hypo_Hyper_PG_1_filtmin2chr_aggregate <- merge(
 nonshared_Re_ipubcomdataBin500bp_Hypo_Hyper_PR_1_filtmin2chr_aggregate <- merge(uniqueTo_hypo_hyper_500bp_in_pR, Re_ipubcomdataBin500bp_Hypo_Hyper_PR_1_filtmin2chr_aggregate, by="Bin500bp")
 
 system("sort -k1,1 -k2,2n ipubcomdataBin500bp_Hypo_PG_1_filtmin2chr.txt > ipubcomdataBin500bp_Hypo_PG_1_filtmin2chr.sort.txt")
-system("bedtools merge -i ipubcomdataBin500bp_Hypo_PG_1_filtmin2chr.sort.txt -d 2 | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > ipubcomdataBin500bp_Hypo_PG_1_filtmin2chr_clustered.txt")
+system("bedtools merge -i ipubcomdataBin500bp_Hypo_PG_1_filtmin2chr.sort.txt | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > ipubcomdataBin500bp_Hypo_PG_1_filtmin2chr_clustered.txt")
 system("bedtools closest -a ipubcomdataBin500bp_Hypo_PG_1_filtmin2chr_clustered.txt -b /home/ankitv/ref_av/hg38/gencode.v29.annotation.gene.sort.gtf -d > ipubcomdataBin500bp_Hypo_PG_1_filtmin2chr_clusteredgene.txt")
 
 ipubcomdataBin500bp_Hypo_PG_1_filtmin2chr_clusteredgene <- read.table("ipubcomdataBin500bp_Hypo_PG_1_filtmin2chr_clusteredgene.txt", header = F, stringsAsFactors = F)
@@ -1357,7 +1373,7 @@ write.table(ipubcomdataBin500bp_Hypo_PG_1_filtmin2chr_clusteredgenedischr, "ipub
 
 system("sort -k1,1 -k2,2n ipubcomdataBin500bp_Hyper_PG_1_filtmin2chr.txt > ipubcomdataBin500bp_Hyper_PG_1_filtmin2chr.sort.txt")
 
-system("bedtools merge -i ipubcomdataBin500bp_Hyper_PG_1_filtmin2chr.sort.txt -d 2 | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > ipubcomdataBin500bp_Hyper_PG_1_filtmin2chr_clustered.txt")
+system("bedtools merge -i ipubcomdataBin500bp_Hyper_PG_1_filtmin2chr.sort.txt | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > ipubcomdataBin500bp_Hyper_PG_1_filtmin2chr_clustered.txt")
 system("bedtools closest -a ipubcomdataBin500bp_Hyper_PG_1_filtmin2chr_clustered.txt -b /home/ankitv/ref_av/hg38/gencode.v29.annotation.gene.sort.gtf -d > ipubcomdataBin500bp_Hyper_PG_1_filtmin2chr_clusteredgene.txt")
 
 ipubcomdataBin500bp_Hyper_PG_1_filtmin2chr_clusteredgene <- read.table("ipubcomdataBin500bp_Hyper_PG_1_filtmin2chr_clusteredgene.txt", header = F, stringsAsFactors = F)
@@ -1387,7 +1403,7 @@ write.table(ipubcomdataBin500bp_Hyper_PG_1_filtmin2chr_clusteredgenedischr, "ipu
 
 system("sort -k1,1 -k2,2n ipubcomdataBin500bp_Hyper_PR_1_filtmin2chr.txt > ipubcomdataBin500bp_Hyper_PR_1_filtmin2chr.sort.txt")
 
-system("bedtools merge -i ipubcomdataBin500bp_Hyper_PR_1_filtmin2chr.sort.txt -d 2 | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > ipubcomdataBin500bp_Hyper_PR_1_filtmin2chr_clustered.txt")
+system("bedtools merge -i ipubcomdataBin500bp_Hyper_PR_1_filtmin2chr.sort.txt | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > ipubcomdataBin500bp_Hyper_PR_1_filtmin2chr_clustered.txt")
 system("bedtools closest -a ipubcomdataBin500bp_Hyper_PR_1_filtmin2chr_clustered.txt -b /home/ankitv/ref_av/hg38/gencode.v29.annotation.gene.sort.gtf  -d > ipubcomdataBin500bp_Hyper_PR_1_filtmin2chr_clusteredgene.txt")
 
 ipubcomdataBin500bp_Hyper_PR_1_filtmin2chr_clusteredgene <- read.table("ipubcomdataBin500bp_Hyper_PR_1_filtmin2chr_clusteredgene.txt", header = F, stringsAsFactors = F)
@@ -1414,7 +1430,7 @@ write.table(ipubcomdataBin500bp_Hyper_PR_1_filtmin2chr_clusteredgenedischr, "ipu
 
 
 system("sort -k1,1 -k2,2n ipubcomdataBin500bp_Hypo_PR_1_filtmin2chr.txt > ipubcomdataBin500bp_Hypo_PR_1_filtmin2chr.sort.txt")
-system("bedtools merge -i ipubcomdataBin500bp_Hypo_PR_1_filtmin2chr.sort.txt -d 2 | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > ipubcomdataBin500bp_Hypo_PR_1_filtmin2chr_clustered.txt")
+system("bedtools merge -i ipubcomdataBin500bp_Hypo_PR_1_filtmin2chr.sort.txt | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > ipubcomdataBin500bp_Hypo_PR_1_filtmin2chr_clustered.txt")
 system("bedtools closest -a ipubcomdataBin500bp_Hypo_PR_1_filtmin2chr_clustered.txt -b /home/ankitv/ref_av/hg38/gencode.v29.annotation.gene.sort.gtf  -d > ipubcomdataBin500bp_Hypo_PR_1_filtmin2chr_clusteredgene.txt")
 
 ipubcomdataBin500bp_Hypo_PR_1_filtmin2chr_clusteredgene <- read.table("ipubcomdataBin500bp_Hypo_PR_1_filtmin2chr_clusteredgene.txt", header = F, stringsAsFactors = F)
@@ -1638,13 +1654,13 @@ ggsave("Scatter_ipubcomdataBin500bp_filt1_counted1_reCC35.svg", width=5, height=
 # write.table(ipubcomdataBin500bp_PG_Hypo_1_filtmin3chr_named, "ipubcomdataBin500bp_PG_Hypo_1_filtmin3chr_named.txt", sep="\t", append = F,quote=F, col.names=T, row.names = F)
 # 
 
-system("bedtools merge -i ipubcomdataBin500bp_PG_Hypo_1_filtmin3chr.sort.txt -d 2 | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > ipubcomdataBin500bp_PG_Hypo_1_filtmin3chr_clustered.txt")
+system("bedtools merge -i ipubcomdataBin500bp_PG_Hypo_1_filtmin3chr.sort.txt | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > ipubcomdataBin500bp_PG_Hypo_1_filtmin3chr_clustered.txt")
 system("bedtools closest -a ipubcomdataBin500bp_PG_Hypo_1_filtmin3chr_clustered.txt -b /home/ankitv/ref_av/hg38/gencode.v29.annotation.gene.sort.gtf -d > ipubcomdataBin500bp_PG_Hypo_1_filtmin3chr_clusteredgene.txt")
 
 
 system("sort -k1,1 -k2,2n miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr.txt > miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr.sort.txt")
 
-system("bedtools merge -i miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr.sort.txt -d 2 | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr_clustered.txt")
+system("bedtools merge -i miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr.sort.txt | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr_clustered.txt")
 system("bedtools closest -a miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr_clustered.txt -b /home/ankitv/ref_av/hg38/gencode.v29.annotation.gene.sort.gtf -d > miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr_clusteredgene.txt")
 
 miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr_clusteredgene <- read.table("miMERGE_myipubCombat3re_chrpos500bp_avg_PG_Hyper_chr_clusteredgene.txt", header = F, stringsAsFactors = F)
@@ -1744,7 +1760,7 @@ write.table(ipubcBin500bp_PG_Hypo_1_filtmin3chr_clusteredgenedischr, "ipubcBin50
 # write.table(ipubcomdataBin500bp_PR_Hypo_1_filtmin3chr_named, "ipubcomdataBin500bp_PR_Hypo_1_filtmin3chr_named.txt", sep="\t", append = F,quote=F, col.names=T, row.names = F)
 # 
 # 
-# system("bedtools merge -i ipubcomdataBin500bp_PR_Hypo_1_filtmin3chr.sort.txt -d 2 | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > ipubcomdataBin500bp_PR_Hypo_1_filtmin3chr_clustered.txt")
+# system("bedtools merge -i ipubcomdataBin500bp_PR_Hypo_1_filtmin3chr.sort.txt | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > ipubcomdataBin500bp_PR_Hypo_1_filtmin3chr_clustered.txt")
 # system("bedtools closest -a ipubcomdataBin500bp_PR_Hypo_1_filtmin3chr_clustered.txt -b /home/ankitv/ref_av/hg38/gencode.v29.annotation.gene.sort.gtf -d > ipubcomdataBin500bp_PR_Hypo_1_filtmin3chr_clusteredgene.txt")
 # 
 # ipubcBin500bp_PR_Hypo_1_filtmin3chr_clusteredgene <- read.table("ipubcomdataBin500bp_PR_Hypo_1_filtmin3chr_clusteredgene.txt", header = F, stringsAsFactors = F)
@@ -1770,7 +1786,7 @@ write.table(ipubcBin500bp_PG_Hypo_1_filtmin3chr_clusteredgenedischr, "ipubcBin50
 # write.table(ipubcBin500bp_PR_Hypo_1_filtmin3chr_clusteredgenedischr, "ipubcBin500bp_PR_Hypo_1_filtmin3chr_clusteredgenedischr.txt", sep="\t", append = F,quote=F, col.names=T, row.names = F)
 # 
 # #Note with closest all bins are assigned with genes
-# system("bedtools merge -i ipubcomaggregatedBin500bp_countedBin500bp_PGchr_genehg38.txt -d 2 | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > ipubcomaggregatedBin500bp_countedBin500bp_PGchr_genehg38_clustered.txt")
+# system("bedtools merge -i ipubcomaggregatedBin500bp_countedBin500bp_PGchr_genehg38.txt | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > ipubcomaggregatedBin500bp_countedBin500bp_PGchr_genehg38_clustered.txt")
 # system("bedtools closest -a ipubcomaggregatedBin500bp_countedBin500bp_PGchr_genehg38_clustered.txt -b /home/ankitv/ref_av/hg38/gencode.v29.annotation.gene.sort.gtf -d > ipubcomaggregatedBin500bp_countedBin500bp_PGchr_genehg38_clusteredgene.txt")
 # 
 # ipubcBin500bp_PGhg38_clusteredgene <- read.table("ipubcomaggregatedBin500bp_countedBin500bp_PGchr_genehg38_clusteredgene.txt", header = F, stringsAsFactors = F)
@@ -1800,7 +1816,7 @@ write.table(ipubcBin500bp_PG_Hypo_1_filtmin3chr_clusteredgenedischr, "ipubcBin50
 # 
 # #xxxxx
 # #Note with closest all bins are assigned with genes
-# system("bedtools merge -i ipubcomaggregatedBin500bp_countedBin500bp_PRchr_genehg38.txt -d 2 | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > ipubcomaggregatedBin500bp_countedBin500bp_PRchr_genehg38_clustered.txt")
+# system("bedtools merge -i ipubcomaggregatedBin500bp_countedBin500bp_PRchr_genehg38.txt | awk '{print $1"\t"$2"\t"$3"\t"$3-$2}' | sort -k1,1  -k2,2n > ipubcomaggregatedBin500bp_countedBin500bp_PRchr_genehg38_clustered.txt")
 # system("bedtools closest -a ipubcomaggregatedBin500bp_countedBin500bp_PRchr_genehg38_clustered.txt -b /home/ankitv/ref_av/hg38/gencode.v29.annotation.gene.sort.gtf -d > ipubcomaggregatedBin500bp_countedBin500bp_PRchr_genehg38_clusteredgene.txt")
 # 
 # ipubcBin500bp_PRhg38_clusteredgene <- read.table("ipubcomaggregatedBin500bp_countedBin500bp_PRchr_genehg38_clusteredgene.txt", header = F, stringsAsFactors = F)
