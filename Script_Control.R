@@ -2077,28 +2077,45 @@ head(icomdataICR1_counted2)
 head(icomdataICR1_counted2)
 dim(icomdataICR1_counted2)
 newarray_iPSC_Control_ICR <- icomdataICR1_counted2
-my_sample_col2 <- data.frame(Annotations= c("Corrclone","Corrclone","Corrclone", "Corrclone","Control","Case","Case","Control","Control","Control","Control","Control","Control","Control","Control","Control","Control"))
+my_sample_col2 <- data.frame(Annotations= c("Corrclone7","Corrclone13","Corrclone35", "Corrclone50","Control","CasepG","CasepR","Control","Control","Control","Control","Control","Control","Control","Control","Control","Control"))
 row.names(my_sample_col2) <- colnames(newarray_iPSC_Control_ICR)
-my_colour2 = list(Annotations = c("Control"= "darkgrey","Case"= "red", "Corrclone"="green"))
+my_colour2 = list(Annotations = c("Control"= "darkgrey","CasepG"= "#EC7063","CasepR"= "#922B21", "Corrclone13"="#48C9B0", "Corrclone7"="#148F77", "Corrclone50"="#52BE80", "Corrclone35"="#1E8449"))
+
 
 breaksList3 = seq(0, 1, by = 0.01)
 
 pheatmap(newarray_iPSC_Control_ICR,
-         color = colorRampPalette(c("navy", "white", "firebrick3"))(length(breaksList3)),
+         color = colorRampPalette(c("yellow", "grey", "blue"))(length(breaksList3)),
          breaks = breaksList3,
          annotation_colors = my_colour2,
          fontsize = 8,
          annotation_col = my_sample_col2,
          clustering_distance_cols = "euclidean", 
          clustering_method = "ward.D", 
-         border_color = "grey60",
+         border_color = NA,
          cutree_cols = 3)
 #save as pheatmap_icomdataICR1_counted2ratio.svg
 head(newarray_iPSC_Control_ICR,1)
 newarray_iPSC_Control_ICR_counted2ration <- as.matrix(newarray_iPSC_Control_ICR[,c(5,8,9:17,1:4,6,7)])
+#same results with this rearranged column set, but I remove VTRNA2 as recommended
+my_sample_col3 <- data.frame(Annotations= c("Control","Control","Control","Control","Control","Control","Control","Control","Control","Control","Control","Corrclone7","Corrclone13","Corrclone35","Corrclone50","CasepG","CasepR"))
+row.names(my_sample_col3) <- colnames(newarray_iPSC_Control_ICR_counted2ration)
+my_colour3 = list(Annotations = c("Control"= "darkgrey","CasepG"= "#EC7063","CasepR"= "#922B21", "Corrclone13"="#48C9B0", "Corrclone7"="#148F77", "Corrclone50"="#52BE80", "Corrclone35"="#1E8449"))
 
 head(newarray_iPSC_Control_ICR_counted2ration)
 dim(newarray_iPSC_Control_ICR_counted2ration)
+pheatmap(newarray_iPSC_Control_ICR_counted2ration[c(1:36,38:42),],
+         color = colorRampPalette(c("yellow", "grey", "blue"))(length(breaksList3)),
+         breaks = breaksList3,
+         annotation_colors = my_colour3,
+         fontsize = 8,
+         annotation_col = my_sample_col3,
+         clustering_distance_cols = "euclidean", 
+         clustering_method = "ward.D", 
+         border_color = NA,
+         cutree_cols = 3)
+
+# pheatmap_newarray_iPSC_Control_ICR_counted2ration_betaval.svg
 wnewarray_iPSC_Control_ICR_counted2rationavg <- data.frame(cbind((rowMedians(newarray_iPSC_Control_ICR_counted2ration[,1:11])),
                                                     (newarray_iPSC_Control_ICR_counted2ration[,1:17])))
 
@@ -5434,7 +5451,7 @@ Monk_human_ICR_hg38_sorted_nearest_impgene_less1kb_impgenes <- unique(Monk_human
 write.table(data.frame(Monk_human_ICR_hg38_sorted_nearest_impgene_less1kb_impgenes), "Monk_human_ICR_hg38_sorted_nearest_impgene_less1kb_impgenes.txt", sep="\t", quote = F, append = F, col.names = F, row.names = F)
 
 
-print('#---------------------------------   END  OF   ANALSIS   ----------------------------------------#')
+print('#----------------------------------   END  OF   ANALSIS   ----------------------------------------#')
 
 
 
